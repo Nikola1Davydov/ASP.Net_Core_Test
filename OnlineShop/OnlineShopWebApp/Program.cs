@@ -1,4 +1,4 @@
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -20,8 +20,19 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// https://localhost:5001/start/hello
+// По текущему времени выведите Доброе утро, Добрый день, Добрый вечер или Доброй ночи. 
+//Ночь - 0:00 до 05:59
+//Утро - 06:00 до 11:59
+//День - 12:00 до 17:59
+//Вечер - 18:00 до 23:59
+
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=calculator}/{action=index}/{a=0}/{b=0}");
+
 
 app.Run();

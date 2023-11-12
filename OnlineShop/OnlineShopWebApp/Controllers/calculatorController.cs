@@ -1,21 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineShopWebApp.Models;
 using System.Diagnostics;
+using System.Data;
+using System.Globalization;
 
 namespace OnlineShopWebApp.Controllers
 {
-    public class HomeController : Controller
+    public class calculatorController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        //public IActionResult Index(string a, string b)
+        //{
+        //    return View();
+        //}
+        public string Index(int a, int b)
         {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
+            int sum = a + b;
+            return a.ToString() + " + " + b.ToString() + " = " + sum.ToString();
         }
 
         public IActionResult Privacy()
