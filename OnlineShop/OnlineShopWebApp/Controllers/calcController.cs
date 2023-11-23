@@ -6,15 +6,18 @@ using System.Globalization;
 
 namespace OnlineShopWebApp.Controllers
 {
-    public class calculatorController : Controller
+    public class calcController : Controller
     {
         //public IActionResult Index(string a, string b)
         //{
         //    return View();
         //}
-        public string Index(int a, int b, string c)
+        public string Index(double a, double b, string c)
         {
-            int sum = 0;
+            double sum;
+            string warnung = "Вы передали не подходящий знак!";
+            if (c == null) c = "+";
+
             if (c == "+")
             {
                 sum = a + b;
@@ -27,7 +30,11 @@ namespace OnlineShopWebApp.Controllers
             {
                 sum = a - b;
             }
-            else return "Вы передали не подходящее знак!";
+            else if (c == "/")
+            {
+                sum = a / b;
+            }
+            else return warnung;
 
             return a.ToString() +" " + c + " " + b.ToString() + " = " + sum.ToString();
         }
