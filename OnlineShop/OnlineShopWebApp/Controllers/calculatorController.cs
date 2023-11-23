@@ -12,10 +12,24 @@ namespace OnlineShopWebApp.Controllers
         //{
         //    return View();
         //}
-        public string Index(int a, int b)
+        public string Index(int a, int b, string c)
         {
-            int sum = a + b;
-            return a.ToString() + " + " + b.ToString() + " = " + sum.ToString();
+            int sum = 0;
+            if (c == "+")
+            {
+                sum = a + b;
+            }
+            else if (c == "*")
+            {
+                sum = a * b;
+            }
+            else if (c == "-")
+            {
+                sum = a - b;
+            }
+            else return "Вы передали не подходящее знак!";
+
+            return a.ToString() +" " + c + " " + b.ToString() + " = " + sum.ToString();
         }
 
         public IActionResult Privacy()
