@@ -13,9 +13,13 @@ namespace OnlineShopWebApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public void Index()
         {
-            return View();
+            int counter = 3;
+            for (int i = 0; i < counter; i++)
+            {
+                test(i);
+            }
         }
 
         public IActionResult Privacy()
@@ -27,6 +31,13 @@ namespace OnlineShopWebApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        private string test(int number)
+        {
+            string Id = "Id" + number;
+            string Name = "Name" + number;
+            string Cost = "Cost" + number;
+            return Id + System.Environment.NewLine + Name + System.Environment.NewLine + Cost;
         }
     }
 }
