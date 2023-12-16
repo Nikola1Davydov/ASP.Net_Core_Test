@@ -1,17 +1,17 @@
 [
   {
-    "id": 1,
     "Name": "Kitchen Revit Families",
-    "Cost": 299.00
+    "Cost": 299.00,
+    "Description":  "testtest"
   },
   {
-    "id": 2,
     "Name": "Window and Doors Mega Pack",
-    "Cost": 129.00
+    "Cost": 129.00,
+    "Description": "testtest"
   },
   {
-    "id": 3,
     "Name": "Revit 2D Parametric Furniture",
-    "Cost": 59.00
+    "Cost": 59.00,
+    "Description": "testtest"
   }
 ]

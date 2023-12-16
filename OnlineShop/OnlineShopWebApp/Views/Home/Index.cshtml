@@ -1,6 +1,13 @@
-﻿@{
+﻿@model string
+@{
     ViewData["Title"] = "Home Page";
 }
+
+@ViewBag.Products
+@ViewData["Product"]
+@TempData["Product"]
+
+@Model
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
