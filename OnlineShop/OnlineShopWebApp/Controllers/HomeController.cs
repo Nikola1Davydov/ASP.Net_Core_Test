@@ -18,22 +18,24 @@ namespace OnlineShopWebApp.Controllers
             _logger = logger;
         }
 
-        public string Index()
+        public string Index(string id)
         {
-            int counter = 4;
-
             string fileName = "MeineWarenFuerShop.json";
             string jsonString = System.IO.File.ReadAllText(fileName);
             Product[] products = JsonSerializer.Deserialize<Product[]>(jsonString);
 
-            string te = string.Empty;
+            string result = string.Empty;
             foreach (var product in products)
             {
-                te += test2(product);
-                Console.WriteLine($"Id: {product.id}, Name: {product.Name}, Cost: {product.Cost}");
+                if (product.id.ToString() == id)
+                {
+                    result += JsonInText(product);
+                }
+                
+                //Console.WriteLine($"Id: {product.id}, Name: {product.Name}, Cost: {product.Cost}");
             }
 
-            return te;
+            return result;
         }
 
         public IActionResult Privacy()
@@ -46,23 +48,23 @@ namespace OnlineShopWebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public string test2(Product testJson)
+        public string JsonInText(Product testJson)
         {
             string test = testJson.id + System.Environment.NewLine + testJson.Name + System.Environment.NewLine + testJson.Cost + System.Environment.NewLine + System.Environment.NewLine;
             return test;
         }
-        private string test(int number)
-        {
-            string result = "";
-            for (int i = 1; i < number+1; i++)
-            {
-                string Id = "Id" + i;
-                string Name = "Name" + i;
-                string Cost = "Cost" + i;
-                result += Id + System.Environment.NewLine + Name + System.Environment.NewLine + Cost + System.Environment.NewLine + System.Environment.NewLine;
-            }
-            return result;
-        }
+        //private string test(int number)
+        //{
+        //    string result = "";
+        //    for (int i = 1; i < number+1; i++)
+        //    {
+        //        string Id = "Id" + i;
+        //        string Name = "Name" + i;
+        //        string Cost = "Cost" + i;
+        //        result += Id + System.Environment.NewLine + Name + System.Environment.NewLine + Cost + System.Environment.NewLine + System.Environment.NewLine;
+        //    }
+        //    return result;
+        //}
         public class Product
         {
             public int id { get; set; }
