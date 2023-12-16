@@ -28,3 +28,4 @@ D:\12_Code\C# Lernen\ASP\OnlineShop\OnlineShopWebApp\obj\Debug\net7.0\refint\Onl
 D:\12_Code\C# Lernen\ASP\OnlineShop\OnlineShopWebApp\obj\Debug\net7.0\OnlineShopWebApp.pdb
 D:\12_Code\C# Lernen\ASP\OnlineShop\OnlineShopWebApp\obj\Debug\net7.0\OnlineShopWebApp.genruntimeconfig.cache
 D:\12_Code\C# Lernen\ASP\OnlineShop\OnlineShopWebApp\obj\Debug\net7.0\ref\OnlineShopWebApp.dll
+D:\12_Code\C# Lernen\ASP\OnlineShop\OnlineShopWebApp\bin\Debug\net7.0\MeineWarenFuerShop.json
