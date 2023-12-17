@@ -23,14 +23,17 @@ namespace OnlineShopWebApp
         public Product TryGetById(int id)
         {
             return products.FirstOrDefault(p => p.Id == id);
-            //foreach (var product in products)
-            //{
-            //    if (product.Id == id)
-            //    {
-            //        return product;
-            //    }
-            //}
-            //return null;
+        }
+
+        private static List<Product> warenkorb = new List<Product>();
+
+        public List<Product> GetWarenkorb()
+        {
+            return warenkorb;
+        }
+        public static void AddNewProductToWarenkorb(int id)
+        {
+            warenkorb.Add(products.FirstOrDefault(p => p.Id == id));
         }
     }
 }

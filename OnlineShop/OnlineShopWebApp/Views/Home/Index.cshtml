@@ -1,13 +1,23 @@
-﻿@model string
+﻿@model List<Product>
 @{
     ViewData["Title"] = "Home Page";
 }
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-4 card shadow">
+            <img class="card-img-top" src="https://revitdynamo.com/cdn/shop/files/RD_SideTables-3DView-GridR.jpg?v=1702472005&width=1080">
+            <div class="card-body">
+                <a style="color:black" href="/Product/index/@product.Id">
+                    <h5>@product.Name</h5>    
+                </a>
+                <h5>@product.Cost Euro</h5>
+                <a class="btn btn-dark" href="/Warenkorb/index/" role="button">In den Warenkorb</a>
+            </div>
+        </div>
+    }
+</div>
 
-@ViewBag.Products
-@ViewData["Product"]
-@TempData["Product"]
-
-@Model
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>

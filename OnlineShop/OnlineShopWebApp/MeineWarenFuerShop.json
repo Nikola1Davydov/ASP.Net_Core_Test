@@ -2,7 +2,7 @@
   {
     "Name": "Kitchen Revit Families",
     "Cost": 299.00,
-    "Description":  "testtest"
+    "Description": "testtest"
   },
   {
     "Name": "Window and Doors Mega Pack",
@@ -11,6 +11,16 @@
   },
   {
     "Name": "Revit 2D Parametric Furniture",
+    "Cost": 59.00,
+    "Description": "testtest"
+  },
+  {
+    "Name": "Revit 3D Furniture - Parametric",
+    "Cost": 89.00,
+    "Description": "testtest"
+  },
+  {
+    "Name": "Revit 3D Parametric Sanitär",
     "Cost": 59.00,
     "Description": "testtest"
   }

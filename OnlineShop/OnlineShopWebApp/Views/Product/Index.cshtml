@@ -1,0 +1,23 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-6 card shadow">
+        <img class="card-img-top" src="https://revitdynamo.com/cdn/shop/files/RD_SideTables-3DView-GridR.jpg?v=1702472005&width=1080">
+        <div class="card-body">
+            <a style="color:black" href="/Product/index/@Model.Id">
+                <h5>@Model.Name</h5>    
+            </a>
+            <h5>@Model.Cost Euro</h5>
+            <a class="btn btn-primary" href="/Warenkorb/index/" role="button">In den Warenkorb</a>
+            <a class="btn btn-secondary" href="/Home/index" role="button">Einkaufen fortsetzen</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
